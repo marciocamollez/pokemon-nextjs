@@ -16,11 +16,11 @@ export default function PokeIndex({ listPokemon }) {
   const [pokemon, setPokemon] = useState(listPokemon);
   const [offset, setOffset] = useState(0);
 
-  const fetchPokemon = async (url, next) => {
-    const response = await fetch(url);
+  const fetchPokemon = async (baseURL, next) => {
+    const response = await fetch(baseURL);
     const nextPokemon = await response.json();
 
-    setOffset(next ? offset + 40 : offset - 40);
+    setOffset(next ? offset + 20 : offset - 20);
     setPokemon(nextPokemon);
   };
 
