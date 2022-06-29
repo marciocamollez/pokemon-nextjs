@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const MainContainer = styled.div`
   max-width: 1100px;
+  padding: 0 15px;
   margin: auto;
 
   h2 {
@@ -49,19 +50,32 @@ export const Pagination = styled.div`
 
 export const SearchBox = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-top: 50px;
   flex-direction: column;
+  min-height: 700px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+    }
+  }
 
   h1 {
     color: #0a3b7a;
     font-size: 2rem;
+    text-align: center;
   }
 
   p {
     font-size: 1rem;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   a {
@@ -79,6 +93,11 @@ export const SearchBox = styled.div`
     border-radius: 10px 0 0 10px;
     max-width: 500px;
     border: 0px;
+
+    @media (max-width: 450px) {
+      border-radius: 10px 10px 10px 10px;
+      margin-bottom: 10px;
+    }
   }
 
   button {
@@ -87,6 +106,11 @@ export const SearchBox = styled.div`
     border: 0px;
     border-radius: 0 10px 10px 0;
     padding: 10px;
+
+    @media (max-width: 450px) {
+      border-radius: 10px 10px 10px 10px;
+      margin-bottom: 10px;
+    }
 
     &:hover {
       background-color: #df5b03;

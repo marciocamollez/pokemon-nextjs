@@ -16,6 +16,7 @@ export const BoxMenu = styled.div`
 
 export const Logo = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 export const Menu = styled.nav`
@@ -27,6 +28,9 @@ export const Menu = styled.nav`
   a {
     color: #000;
     font-weight: 700;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
 
     &:hover {
       color: #df5b03;

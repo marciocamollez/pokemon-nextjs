@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { MainContainer, SearchBox } from '../styles/estilo';
 import Head from 'next/head';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
+import ash from '../../public/ash.png';
 
 export default function Home() {
   const baseURL = 'https://pokeapi.co/api/v2/';
@@ -63,8 +66,11 @@ export default function Home() {
                 </h3>
               </div>
             ))}
+
+          <Image src={ash} alt="Ash" width={200} height={350} />
         </SearchBox>
       </MainContainer>
+      <Footer />
     </div>
   );
 }

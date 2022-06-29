@@ -22,7 +22,7 @@ export function Header() {
             </Link>
 
             <Link href="/pokemon">
-              <a>Pokémons</a>
+              <a>Lista de Pokémons</a>
             </Link>
           </Menu>
         </BoxMenu>

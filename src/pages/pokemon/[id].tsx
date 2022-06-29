@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { MainContainer } from '../../styles/estilo';
 import { DetalhePokemon, Imagem, PokeImg } from './pokemon.styled';
 import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -60,6 +61,7 @@ export default function Personagem({ pokemon }) {
           <Link href={'/pokemon'}>Voltar</Link>
         </DetalhePokemon>
       </MainContainer>
+      <Footer />
     </div>
   );
 }
