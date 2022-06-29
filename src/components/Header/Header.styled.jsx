@@ -36,4 +36,8 @@ export const Menu = styled.nav`
       color: #df5b03;
     }
   }
+
+  @media (max-width: 350px) {
+    flex-direction: column;
+  }
 `;

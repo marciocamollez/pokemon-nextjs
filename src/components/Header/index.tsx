@@ -24,6 +24,10 @@ export function Header() {
             <Link href="/pokemon">
               <a>Lista de Pokémons</a>
             </Link>
+
+            <Link href="/cidades">
+              <a>Lista de Cidades</a>
+            </Link>
           </Menu>
         </BoxMenu>
       </MainContainer>
