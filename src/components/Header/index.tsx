@@ -28,6 +28,10 @@ export function Header() {
             <Link href="/cidades">
               <a>Lista de Cidades</a>
             </Link>
+
+            <Link href="/itens">
+              <a>Lista de Itens</a>
+            </Link>
           </Menu>
         </BoxMenu>
       </MainContainer>
