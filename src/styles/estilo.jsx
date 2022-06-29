@@ -46,3 +46,51 @@ export const Pagination = styled.div`
     }
   }
 `;
+
+export const SearchBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+
+  h1 {
+    color: #0a3b7a;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 50px;
+  }
+
+  a {
+    color: #0a3b7a;
+
+    &:hover {
+      color: #df5b03;
+    }
+  }
+
+  input {
+    background-color: #fc0;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    max-width: 500px;
+    border: 0px;
+  }
+
+  button {
+    background-color: #0a3b7a;
+    color: #fff;
+    border: 0px;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+
+    &:hover {
+      background-color: #df5b03;
+      cursor: pointer;
+    }
+  }
+`;
