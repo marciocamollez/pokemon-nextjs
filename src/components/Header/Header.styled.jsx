@@ -32,12 +32,16 @@ export const Menu = styled.nav`
     margin-right: 20px;
     text-align: center;
 
+    @media (max-width: 450px) {
+      margin-top: 10px;
+    }
+
     &:hover {
       color: #df5b03;
     }
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 450px) {
     flex-direction: column;
   }
 `;

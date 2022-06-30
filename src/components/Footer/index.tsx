@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import rodape from '../../../public/images/footer.svg';
+import rodape from '../../../public/images/footer.png';
 import { Rodape, Logo } from './Footer.styled';
 import { MainContainer } from '../../styles/estilo.styled';
 
