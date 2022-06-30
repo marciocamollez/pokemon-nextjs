@@ -28,7 +28,7 @@ export default function PokeIndex({ listPokemon }) {
   return (
     <div>
       <Head>
-        <title>PokéAPI</title>
+        <title>PokéAPI - Página de Pokémons</title>
       </Head>
       <Header />
       <MainContainer>

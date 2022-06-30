@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -18,6 +19,9 @@ export default function ItemDetalhe({ berries }) {
 
   return (
     <div>
+      <Head>
+        <title>PokéAPI - Página de Itens</title>
+      </Head>
       <Header />
       <MainContainer>
         <DetalhePokemon>
