@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { MainContainer, SearchBox } from '../styles/estilo';
+import { MainContainer, SearchBox } from '../styles/estilo.styled';
 import Head from 'next/head';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import ash from '../../public/ash.png';
+import ash from '../../public/images/ash.png';
 
 export default function Home() {
   const baseURL = 'https://pokeapi.co/api/v2/';

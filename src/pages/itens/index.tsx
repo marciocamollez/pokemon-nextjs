@@ -7,7 +7,7 @@ import {
   ItemPersonagem,
 } from '../../styles/itens.styled';
 import Head from 'next/head';
-import { Pagination } from '../../styles/estilo';
+import { Pagination } from '../../styles/estilo.styled';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 

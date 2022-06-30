@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { MainContainer } from '../../styles/estilo';
+import { MainContainer } from '../../styles/estilo.styled';
 import { DetalhePokemon, PokeImg } from '../../styles/cidades.styled';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';

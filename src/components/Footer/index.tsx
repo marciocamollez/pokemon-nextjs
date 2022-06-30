@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import rodape from '../../../public/footer.svg';
+import rodape from '../../../public/images/footer.svg';
 import { Rodape, Logo } from './Footer.styled';
-import { MainContainer } from '../../styles/estilo';
+import { MainContainer } from '../../styles/estilo.styled';
 
 export function Footer() {
   return (
