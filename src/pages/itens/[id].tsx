@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { MainContainer } from '../../styles/estilo';
-import { DetalhePokemon, Imagem, PokeImg } from './itens.styled';
+import { DetalhePokemon, Imagem, PokeImg } from '../../styles/itens.styled';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 

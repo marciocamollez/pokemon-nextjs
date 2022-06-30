@@ -52,12 +52,26 @@ export const PokeImg = styled.div`
   p {
     text-align: center;
   }
+
+  div {
+    img {
+      margin: auto;
+    }
+  }
 `;
 
 export const MainContainer = styled.div`
   max-width: 1100px;
   margin: auto;
   padding: 0 15px;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+  }
 
   h2 {
     font-size: 1.5rem;

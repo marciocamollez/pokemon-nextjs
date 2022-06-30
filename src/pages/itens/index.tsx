@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import { MainContainer, ListaPersonagem, ItemPersonagem } from './itens.styled';
+import {
+  MainContainer,
+  ListaPersonagem,
+  ItemPersonagem,
+} from '../../styles/itens.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo';
 import { Header } from '../../components/Header';
@@ -28,6 +32,7 @@ export default function Itens({ listItem }) {
       </Head>
       <Header />
       <MainContainer>
+        <h1>Itens</h1>
         <ListaPersonagem>
           {item.results.map((i) => (
             <ItemPersonagem key={i.name}>

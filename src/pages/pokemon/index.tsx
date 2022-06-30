@@ -5,7 +5,7 @@ import {
   MainContainer,
   ListaPersonagem,
   ItemPersonagem,
-} from './pokemon.styled';
+} from '../../styles/pokemon.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo';
 import { Header } from '../../components/Header';
@@ -32,6 +32,7 @@ export default function PokeIndex({ listPokemon }) {
       </Head>
       <Header />
       <MainContainer>
+        <h1>Pokémon</h1>
         <ListaPersonagem>
           {pokemon.results.map((poke) => (
             <ItemPersonagem key={poke.name}>

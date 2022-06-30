@@ -5,7 +5,7 @@ import {
   MainContainer,
   ListaPersonagem,
   ItemPersonagem,
-} from './cidades.styled';
+} from '../../styles/cidades.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo';
 import { Header } from '../../components/Header';
@@ -32,6 +32,7 @@ export default function Cidades({ listCidades }) {
       </Head>
       <Header />
       <MainContainer>
+        <h1>Cidades</h1>
         <ListaPersonagem>
           {cidades.results.map((city) => (
             <ItemPersonagem key={city.name}>
