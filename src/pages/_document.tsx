@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import '../styles/estilo.styled';
 
 export default class MyDocument extends Document {
   render() {

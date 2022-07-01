@@ -1,25 +1,24 @@
-import styled from 'styled-components';
 
-export const Cabecalho = styled.div`
+.cabecalho{
   display: flex;
   background: #fc0;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
   border-bottom: 5px solid #0a3b7a;
-`;
+}
 
-export const BoxMenu = styled.div`
+.boxmenu{
   display: flex;
   flex-direction: column;
-`;
+}
 
-export const Logo = styled.div`
+.logo{
   display: flex;
   justify-content: center;
-`;
+}
 
-export const Menu = styled.nav`
+nav.menu{
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -44,4 +43,4 @@ export const Menu = styled.nav`
   @media (max-width: 450px) {
     flex-direction: column;
   }
-`;
+}

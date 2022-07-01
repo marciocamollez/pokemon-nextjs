@@ -1,10 +1,4 @@
-import styled from 'styled-components';
-
-export const Imagem = styled.img`
-  max-width: 100%;
-  display: block;
-`;
-export const DetalhePokemon = styled.div`
+.detalhepokemon{
   display: flex;
   flex-direction: column;
   min-height: 500px;
@@ -41,9 +35,9 @@ export const DetalhePokemon = styled.div`
       color: #fff;
     }
   }
-`;
+}
 
-export const PokeImg = styled.div`
+.pokeimg{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -53,44 +47,17 @@ export const PokeImg = styled.div`
   p {
     text-align: center;
   }
-`;
+}
 
-export const MainContainer = styled.div`
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 15px;
-
-  h1 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #000;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    a {
-      color: #0a3b7a;
-
-      &:hover {
-        color: #df5b03;
-      }
-    }
-  }
-`;
-
-export const ListaPersonagem = styled.ul`
+.listapersonagem{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
-`;
-export const ItemPersonagem = styled.li`
+}
+
+.itempersonagem{
   list-style: none;
   padding: 0;
   flex-basis: 20%;
@@ -103,4 +70,4 @@ export const ItemPersonagem = styled.li`
   @media (max-width: 500px) {
     flex-basis: 100%;
   }
-`;
+}

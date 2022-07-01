@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import {
-  MainContainer,
-  ListaPersonagem,
-  ItemPersonagem,
-} from '../../styles/cidades.styled';
 import Head from 'next/head';
-import { Pagination } from '../../styles/estilo.styled';
+import globalstyles from '../../styles/estilo.module.scss';
+import styles from '../../styles/template-paginas.module.scss';
 
 const baseURL = 'https://pokeapi.co/api/v2/location/';
 
@@ -28,18 +24,18 @@ export default function Cidades({ listCidades }) {
       <Head>
         <title>PokéAPI - Cidades</title>
       </Head>
-      <MainContainer>
+      <div className={globalstyles.container}>
         <h1>Cidades</h1>
-        <ListaPersonagem>
+        <div className={styles.listapersonagem}>
           {cidades.results.map((city) => (
-            <ItemPersonagem key={city.name}>
+            <div className={styles.itempersonagem} key={city.name}>
               <h2>
                 <Link href={`cidades/${city.name}`}>{city.name}</Link>
               </h2>
-            </ItemPersonagem>
+            </div>
           ))}
 
-          <Pagination>
+          <div className={globalstyles.pagination}>
             <button
               disabled={!cidades.previous}
               onClick={() => fetchCidades(cidades.previous, false)}
@@ -52,9 +48,9 @@ export default function Cidades({ listCidades }) {
             >
               Próximo
             </button>
-          </Pagination>
-        </ListaPersonagem>
-      </MainContainer>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MainContainer, SearchBox } from '../styles/estilo.styled';
+import globalstyles from '../styles/estilo.module.scss';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -35,8 +35,8 @@ export default function Home() {
       <Head>
         <title>PokéAPI - Página Inicial</title>
       </Head>
-      <MainContainer>
-        <SearchBox>
+      <div className={globalstyles.container}>
+        <div className={globalstyles.searchbox}>
           <h1>PokéAPI</h1>
           <p>
             Utilize a barra de busca abaixo para achar o pokémon e entrar em
@@ -65,8 +65,8 @@ export default function Home() {
             ))}
 
           <Image src={ash} alt="Ash" width={200} height={350} />
-        </SearchBox>
-      </MainContainer>
+        </div>
+      </div>
     </div>
   );
 }

@@ -2,8 +2,9 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { MainContainer } from '../../styles/estilo.styled';
-import { DetalhePokemon, Imagem, PokeImg } from '../../styles/pokemon.styled';
+import styles from '../../styles/template-paginas.module.scss';
+import globalstyles from '../../styles/estilo.module.scss';
+import Image from 'next/image';
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -20,22 +21,32 @@ export default function Personagem({ pokemon }) {
       <Head>
         <title>PokéAPI - Página de Pokémons</title>
       </Head>
-      <MainContainer>
-        <DetalhePokemon>
+      <div className={globalstyles.container}>
+        <div className={styles.detalhepokemon}>
           <h1>
             #{pokemon.id} - {pokemon.name}
           </h1>
           {/*<p>Personagem id: {query.id}</p>*/}
-          <PokeImg>
+          <div className={styles.pokeimg}>
             <div>
               <p>Original Form:</p>
-              <Imagem src={pokemon.sprites.front_default} alt={pokemon.name} />
+              <Image
+                src={pokemon.sprites.front_default}
+                alt={pokemon.name}
+                width={100}
+                height={100}
+              />
             </div>
             <div>
               <p>Shiny:</p>
-              <Imagem src={pokemon.sprites.front_shiny} alt={pokemon.name} />
+              <Image
+                src={pokemon.sprites.front_shiny}
+                alt={pokemon.name}
+                width={100}
+                height={100}
+              />
             </div>
-          </PokeImg>
+          </div>
           <p>Base Experience - {pokemon.base_experience}</p>
           <p>
             Weight: {pokemon.weight} / Heigth: {pokemon.height}
@@ -60,8 +71,8 @@ export default function Personagem({ pokemon }) {
           </ul>
 
           <Link href={'/pokemon'}>Voltar</Link>
-        </DetalhePokemon>
-      </MainContainer>
+        </div>
+      </div>
     </div>
   );
 }

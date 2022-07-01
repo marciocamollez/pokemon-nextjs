@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "axios": "^0.27.2",
+    "sass": "^1.53.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
@@ -20,7 +21,7 @@
     "@types/react": "^17.0.39",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
-    "typescript": "^4.6.2",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.2"
   }
 }

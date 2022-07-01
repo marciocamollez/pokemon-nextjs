@@ -2,8 +2,8 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { MainContainer } from '../../styles/estilo.styled';
-import { DetalhePokemon, PokeImg } from '../../styles/cidades.styled';
+import globalstyles from '../../styles/estilo.module.scss';
+import styles from '../../styles/template-paginas.module.scss';
 
 const baseURL = 'https://pokeapi.co/api/v2/location/';
 
@@ -20,13 +20,13 @@ export default function DetalheCidade({ cities }) {
       <Head>
         <title>PokéAPI - Página de Cidades</title>
       </Head>
-      <MainContainer>
-        <DetalhePokemon>
+      <div className={globalstyles.container}>
+        <div className={styles.detalhepokemon}>
           <h1>
             #{cities.id} - {cities.name}
           </h1>
           {/*<p>Personagem id: {query.id}</p>*/}
-          <PokeImg>
+          <div className={styles.pokeimg}>
             <div>
               <p>Região:</p>
               <h3>{cities.region.name}</h3>
@@ -40,11 +40,11 @@ export default function DetalheCidade({ cities }) {
                 </span>
               ))}
             </div>
-          </PokeImg>
+          </div>
 
           <Link href={'/cidades'}>Voltar</Link>
-        </DetalhePokemon>
-      </MainContainer>
+        </div>
+      </div>
     </div>
   );
 }

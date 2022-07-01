@@ -1,9 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { MainContainer } from '../../styles/estilo.styled';
-import { DetalhePokemon, Imagem, PokeImg } from '../../styles/itens.styled';
+import globalstyles from '../../styles/estilo.module.scss';
+import styles from '../../styles/template-paginas.module.scss';
 
 const baseURL = 'https://pokeapi.co/api/v2/item/';
 
@@ -20,18 +21,23 @@ export default function ItemDetalhe({ berries }) {
       <Head>
         <title>PokéAPI - Página de Itens</title>
       </Head>
-      <MainContainer>
-        <DetalhePokemon>
+      <div className={globalstyles.container}>
+        <div className={styles.detalhepokemon}>
           <h1>
             #{berries.id} - {berries.name}
           </h1>
           {/*<p>Personagem id: {query.id}</p>*/}
-          <PokeImg>
+          <div className={styles.pokeimg}>
             <div>
               <p>Image:</p>
-              <Imagem src={berries.sprites.default} alt={berries.name} />
+              <Image
+                src={berries.sprites.default}
+                alt={berries.name}
+                width={100}
+                height={100}
+              />
             </div>
-          </PokeImg>
+          </div>
           <p>Cost - {berries.cost}</p>
           <p>Fling Effect? {berries.fling_effect}</p>
           <p>Fling Power? {berries.fling_power}</p>
@@ -52,8 +58,8 @@ export default function ItemDetalhe({ berries }) {
           </ul>
 
           <Link href={'/itens'}>Voltar</Link>
-        </DetalhePokemon>
-      </MainContainer>
+        </div>
+      </div>
     </div>
   );
 }

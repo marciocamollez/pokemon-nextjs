@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import {
-  MainContainer,
-  ListaPersonagem,
-  ItemPersonagem,
-} from '../../styles/itens.styled';
 import Head from 'next/head';
-import { Pagination } from '../../styles/estilo.styled';
+import globalstyles from '../../styles/estilo.module.scss';
+import styles from '../../styles/template-paginas.module.scss';
 
 const baseURL = 'https://pokeapi.co/api/v2/item';
 
@@ -28,18 +24,18 @@ export default function Itens({ listItem }) {
       <Head>
         <title>PokéAPI - Itens</title>
       </Head>
-      <MainContainer>
+      <div className={globalstyles.container}>
         <h1>Itens</h1>
-        <ListaPersonagem>
+        <div className={styles.listapersonagem}>
           {item.results.map((i) => (
-            <ItemPersonagem key={i.name}>
+            <div className={styles.itempersonagem} key={i.name}>
               <h2>
                 <Link href={`itens/${i.name}`}>{i.name}</Link>
               </h2>
-            </ItemPersonagem>
+            </div>
           ))}
 
-          <Pagination>
+          <div className={globalstyles.pagination}>
             <button
               disabled={!item.previous}
               onClick={() => fetchPokemon(item.previous, false)}
@@ -52,9 +48,9 @@ export default function Itens({ listItem }) {
             >
               Próximo
             </button>
-          </Pagination>
-        </ListaPersonagem>
-      </MainContainer>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

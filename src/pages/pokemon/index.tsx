@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
-import {
-  MainContainer,
-  ListaPersonagem,
-  ItemPersonagem,
-} from '../../styles/pokemon.styled';
 import Head from 'next/head';
-import { Pagination } from '../../styles/estilo.styled';
+import styles from '../../styles/template-paginas.module.scss';
+import globalstyles from '../../styles/estilo.module.scss';
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
@@ -28,18 +24,18 @@ export default function PokeIndex({ listPokemon }) {
       <Head>
         <title>PokéAPI - Página de Pokémons</title>
       </Head>
-      <MainContainer>
+      <div className={globalstyles.container}>
         <h1>Pokémon</h1>
-        <ListaPersonagem>
+        <div className={styles.listapersonagem}>
           {pokemon.results.map((poke) => (
-            <ItemPersonagem key={poke.name}>
+            <div className={styles.itempersonagem} key={poke.name}>
               <h2>
                 <Link href={`pokemon/${poke.name}`}>{poke.name}</Link>
               </h2>
-            </ItemPersonagem>
+            </div>
           ))}
 
-          <Pagination>
+          <div className={globalstyles.pagination}>
             <button
               disabled={!pokemon.previous}
               onClick={() => fetchPokemon(pokemon.previous, false)}
@@ -52,9 +48,9 @@ export default function PokeIndex({ listPokemon }) {
             >
               Próximo
             </button>
-          </Pagination>
-        </ListaPersonagem>
-      </MainContainer>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
