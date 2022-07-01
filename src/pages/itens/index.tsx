@@ -8,8 +8,6 @@ import {
 } from '../../styles/itens.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/item';
 
@@ -30,7 +28,6 @@ export default function Itens({ listItem }) {
       <Head>
         <title>PokéAPI - Itens</title>
       </Head>
-      <Header />
       <MainContainer>
         <h1>Itens</h1>
         <ListaPersonagem>
@@ -58,7 +55,6 @@ export default function Itens({ listItem }) {
           </Pagination>
         </ListaPersonagem>
       </MainContainer>
-      <Footer />
     </div>
   );
 }

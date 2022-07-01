@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { MainContainer } from '../../styles/estilo.styled';
 import { DetalhePokemon, Imagem, PokeImg } from '../../styles/pokemon.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -22,7 +20,6 @@ export default function Personagem({ pokemon }) {
       <Head>
         <title>PokéAPI - Página de Pokémons</title>
       </Head>
-      <Header />
       <MainContainer>
         <DetalhePokemon>
           <h1>
@@ -65,7 +62,6 @@ export default function Personagem({ pokemon }) {
           <Link href={'/pokemon'}>Voltar</Link>
         </DetalhePokemon>
       </MainContainer>
-      <Footer />
     </div>
   );
 }

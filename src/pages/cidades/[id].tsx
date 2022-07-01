@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { MainContainer } from '../../styles/estilo.styled';
 import { DetalhePokemon, PokeImg } from '../../styles/cidades.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/location/';
 
@@ -22,7 +20,6 @@ export default function DetalheCidade({ cities }) {
       <Head>
         <title>PokéAPI - Página de Cidades</title>
       </Head>
-      <Header />
       <MainContainer>
         <DetalhePokemon>
           <h1>
@@ -48,7 +45,6 @@ export default function DetalheCidade({ cities }) {
           <Link href={'/cidades'}>Voltar</Link>
         </DetalhePokemon>
       </MainContainer>
-      <Footer />
     </div>
   );
 }

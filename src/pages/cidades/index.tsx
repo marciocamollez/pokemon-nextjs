@@ -8,8 +8,6 @@ import {
 } from '../../styles/cidades.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/location/';
 
@@ -30,7 +28,6 @@ export default function Cidades({ listCidades }) {
       <Head>
         <title>PokéAPI - Cidades</title>
       </Head>
-      <Header />
       <MainContainer>
         <h1>Cidades</h1>
         <ListaPersonagem>
@@ -58,7 +55,6 @@ export default function Cidades({ listCidades }) {
           </Pagination>
         </ListaPersonagem>
       </MainContainer>
-      <Footer />
     </div>
   );
 }

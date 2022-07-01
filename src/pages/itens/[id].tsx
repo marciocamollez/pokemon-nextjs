@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { MainContainer } from '../../styles/estilo.styled';
 import { DetalhePokemon, Imagem, PokeImg } from '../../styles/itens.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/item/';
 
@@ -22,7 +20,6 @@ export default function ItemDetalhe({ berries }) {
       <Head>
         <title>PokéAPI - Página de Itens</title>
       </Head>
-      <Header />
       <MainContainer>
         <DetalhePokemon>
           <h1>
@@ -57,7 +54,6 @@ export default function ItemDetalhe({ berries }) {
           <Link href={'/itens'}>Voltar</Link>
         </DetalhePokemon>
       </MainContainer>
-      <Footer />
     </div>
   );
 }

@@ -8,8 +8,6 @@ import {
 } from '../../styles/pokemon.styled';
 import Head from 'next/head';
 import { Pagination } from '../../styles/estilo.styled';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
 
 const baseURL = 'https://pokeapi.co/api/v2/pokemon';
 
@@ -30,7 +28,6 @@ export default function PokeIndex({ listPokemon }) {
       <Head>
         <title>PokéAPI - Página de Pokémons</title>
       </Head>
-      <Header />
       <MainContainer>
         <h1>Pokémon</h1>
         <ListaPersonagem>
@@ -58,7 +55,6 @@ export default function PokeIndex({ listPokemon }) {
           </Pagination>
         </ListaPersonagem>
       </MainContainer>
-      <Footer />
     </div>
   );
 }
