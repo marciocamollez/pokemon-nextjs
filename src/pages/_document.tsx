@@ -1,7 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import '../styles/estilo.styled';
-import '../components/Footer/Footer.styled';
-import '../components/Header/Header.styled';
 
 export default class MyDocument extends Document {
   render() {
