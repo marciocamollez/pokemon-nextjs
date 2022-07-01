@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { MainContainer, SearchBox } from '../styles/estilo.styled';
 import Head from 'next/head';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import ash from '../../public/images/ash.png';
@@ -37,7 +35,6 @@ export default function Home() {
       <Head>
         <title>PokéAPI - Página Inicial</title>
       </Head>
-      <Header />
       <MainContainer>
         <SearchBox>
           <h1>PokéAPI</h1>
@@ -70,7 +67,6 @@ export default function Home() {
           <Image src={ash} alt="Ash" width={200} height={350} />
         </SearchBox>
       </MainContainer>
-      <Footer />
     </div>
   );
 }
